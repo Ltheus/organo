@@ -1,10 +1,15 @@
 import "./Dropdown.css";
 
-const Dropdown = ({ label, list }) => {
+const Dropdown = ({ label, list, required, value, onChange }) => {
   return (
     <div className="dropdown">
       <label htmlFor="selector">{label}</label>
-      <select name="selector">
+      <select
+        name="selector"
+        required={required}
+        value={value}
+        onChange={(event) => onChange(event.target.value)}
+      >
         {list.map((item) => {
           return <option key={item}> {item} </option>;
         })}
