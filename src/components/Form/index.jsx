@@ -4,7 +4,7 @@ import Dropdown from "../Dropdown";
 import Button from "../Button";
 import { useState } from "react";
 
-const Form = () => {
+const Form = ({ onAddEmployee }) => {
   const [name, setName] = useState("");
   const [position, setPosition] = useState("");
   const [imageUrl, setImageUrl] = useState("");
@@ -23,6 +23,12 @@ const Form = () => {
   const submitForm = (event) => {
     event.preventDefault();
     console.log(name, position, imageUrl, team);
+    onAddEmployee({
+      name,
+      position,
+      imageUrl,
+      team,
+    });
   };
 
   return (
