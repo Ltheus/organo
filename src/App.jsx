@@ -22,6 +22,9 @@ function App() {
           teamName={team?.name}
           mainColor={team?.mainColor}
           accentColor={team?.accentColor}
+          employeeList={employeeList.filter(
+            (employee) => employee?.team === team?.name
+          )}
         />
       ))}
     </>
