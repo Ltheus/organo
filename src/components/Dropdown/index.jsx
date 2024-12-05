@@ -11,7 +11,7 @@ const Dropdown = ({ label, list, required, value, onChange }) => {
         onChange={(event) => onChange(event.target.value)}
       >
         {list.map((item) => {
-          return <option key={item}> {item} </option>;
+          return <option key={item?.name}> {item?.name} </option>;
         })}
       </select>
     </div>

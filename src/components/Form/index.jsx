@@ -3,6 +3,7 @@ import TextInput from "../TextInput";
 import Dropdown from "../Dropdown";
 import Button from "../Button";
 import { useState } from "react";
+import { teamList } from "../../utils/data/teams";
 
 const Form = ({ onAddEmployee }) => {
   const [name, setName] = useState("");
@@ -10,15 +11,7 @@ const Form = ({ onAddEmployee }) => {
   const [imageUrl, setImageUrl] = useState("");
   const [team, setTeam] = useState("");
 
-  const teams = [
-    "Programação",
-    "Front-end",
-    "Data Science",
-    "Devops",
-    "UX & Design",
-    "Mobile",
-    "Inovação e Gestão",
-  ];
+  const teams = teamList;
 
   const submitForm = (event) => {
     event.preventDefault();

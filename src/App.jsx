@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Banner from "./components/Banner";
 import Form from "./components/Form";
+import TeamSection from "./components/TeamSection";
+import { teamList } from "./utils/data/teams";
 
 function App() {
   const [employeeList, setEmployeeList] = useState([]);
@@ -14,6 +16,14 @@ function App() {
           console.log(employee, employeeList);
         }}
       />
+      {teamList.map((team) => (
+        <TeamSection
+          key={team?.name}
+          teamName={team?.name}
+          mainColor={team?.mainColor}
+          accentColor={team?.accentColor}
+        />
+      ))}
     </>
   );
 }

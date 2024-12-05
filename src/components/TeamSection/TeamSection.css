@@ -1,0 +1,10 @@
+.teamSection {
+  text-align: center;
+  padding: 32px;
+}
+
+.teamSection h3 {
+  display: inline-block;
+  padding-bottom: 8px;
+  border-bottom: 4px solid;
+}
