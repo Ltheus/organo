@@ -3,6 +3,7 @@ import Banner from "./components/Banner";
 import Form from "./components/Form";
 import TeamSection from "./components/TeamSection";
 import { teamList } from "./utils/data/teams";
+import Footer from "./components/Footer";
 
 function App() {
   const [employeeList, setEmployeeList] = useState([]);
@@ -13,7 +14,6 @@ function App() {
       <Form
         onAddEmployee={(employee) => {
           setEmployeeList([...employeeList, employee]);
-          console.log(employee, employeeList);
         }}
       />
       {teamList.map((team) => (
@@ -27,6 +27,7 @@ function App() {
           )}
         />
       ))}
+      <Footer />
     </>
   );
 }
