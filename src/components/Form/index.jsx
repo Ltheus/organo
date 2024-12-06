@@ -15,13 +15,16 @@ const Form = ({ onAddEmployee }) => {
 
   const submitForm = (event) => {
     event.preventDefault();
-    console.log(name, position, imageUrl, team);
     onAddEmployee({
       name,
       position,
       imageUrl,
       team,
     });
+    setName("");
+    setPosition("");
+    setImageUrl("");
+    setTeam("");
   };
 
   return (
@@ -31,14 +34,14 @@ const Form = ({ onAddEmployee }) => {
         <TextInput
           required
           label="Nome"
-          placeholder="Digite seu nome"
+          placeholder="Digite o nome do colaborador"
           value={name}
           onChange={(value) => setName(value)}
         />
         <TextInput
           required
           label="Cargo"
-          placeholder="Digite seu cargo"
+          placeholder="Digite o cargo do colaborador"
           value={position}
           onChange={(value) => setPosition(value)}
         />
