@@ -1,5 +1,5 @@
 import bannerImg from "/images/banner.png";
-import "./Banner.modules.css";
+import "./Banner.css";
 
 const Banner = () => {
   return (
